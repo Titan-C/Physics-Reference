@@ -34,8 +34,10 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
+    'sphinx.ext.pngmath',
+    'matplotlib.sphinxext.plot_directive',
     'sphinx.ext.ifconfig',
+    'math_dollar'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -199,6 +201,7 @@ latex_elements = {
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
 }
+pngmath_latex_preamble = "\usepackage{braket}"
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
