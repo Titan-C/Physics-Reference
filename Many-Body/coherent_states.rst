@@ -78,7 +78,7 @@ Many boson operators
 The previous definition of a single boson operator coherent state can be extended to a
 many states system in which one only needs to use the creation operators for
 other states over a basis set $\{\ket{\alpha}\}$ finite or infinite.
-As such a coherent state is estrablished as:
+As such a coherent state is established as:
 
 .. math::
   \ket{\varphi} &= e^{b_1\hat{b}^\dagger_1}e^{b_2\hat{b}^\dagger_3}\cdots e^{b_p\hat{b}^\dagger_p} \cdots \ket{\emptyset} \\
@@ -99,6 +99,12 @@ also
    &= \frac{\partial}{\partial b_\alpha} \exp(\sum_\alpha b_\alpha \hat{b}_\alpha^\dagger)\ket{\emptyset} \\
    &= \frac{\partial}{\partial b_\alpha} \ket{\varphi} \\
    \Rightarrow \bra{\bar{\varphi}}\hat{b}_\alpha &= \frac{\partial}{\partial \bar{b}_\alpha} \bra{\bar{\varphi}}
+
+The commutator:
+
+.. math::
+  [\hat{b}_\alpha,\ket{\varphi}\bra{\bar{\varphi}}]=\left(b_\alpha - \frac{\partial}{\partial \bar{b}_\alpha}\right)\ket{\varphi}\bra{\bar{\varphi}}
+
 
 And the many-particle closure relation is obeyed:
 
