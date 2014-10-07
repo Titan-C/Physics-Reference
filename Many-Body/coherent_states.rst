@@ -7,8 +7,8 @@ Coherent States
 Boson Coherent State
 --------------------
 
-Single Particle
-'''''''''''''''
+Single Boson operator
+'''''''''''''''''''''
 Start defining a bosonic state element of the Fock space, which is an eigenstate
 of the annihilation operator. As such $\hat{b}\ket{b} = b\ket{b}$ and it can be
 constructed in the form:
@@ -24,9 +24,10 @@ constructed in the form:
 Then it is clear the corresponding eigenstate
 
 .. math::
-   \hat{b}\ket{b}= \sum_n\hat{b}\ket{n}\frac{b^n}{\sqrt{n!}}
+   \hat{b}\ket{b} &= \sum_n\hat{b}\ket{n}\frac{b^n}{\sqrt{n!}}
     =\sum_n \sqrt{n}\ket{n-1}\frac{bb^{(n-1)}}{\sqrt{n}\sqrt{(n-1)!}}
-    =b\sum_n\ket{n}\frac{b^n}{\sqrt{n!}} = b\ket{b}
+    =b\sum_n\ket{n}\frac{b^n}{\sqrt{n!}} = b\ket{b} \\
+   \bra{\bar{b}}\hat{b}^\dagger &= \bra{\bar{b}}\bar{b}
 
 The overlap between 2 states is
 
@@ -60,5 +61,48 @@ And the normalized probability to be in a state $\ket{n}$ is give by
   plt.xlim([-0.6,m[-1]+1])
   plt.title('Probability distribution fo a coherent state with \$\\bar{b}b=n_0=7\$')
 
+The matrix elements of an operator, that is normal ordered, are described by:
+
+.. math::
+  \bra{\bar{b}_1}\hat{O}(\hat{b}^\dagger,\hat{b})\ket{b_2}
+   = O(\bar{b}_1,b_2)e^{\bar{b}_1 b_ 2}
+
+The unit operator is established as:
+
+.. math::
+  \hat{1} = \int \frac{d\bar{b}db}{2\pi i}e^{-\bar{b} b} \ket{b}\bra{\bar{b}}
+
+Many boson operators
+''''''''''''''''''''
+
+The previous definition of a single boson operator coherent state can be extended to a
+many states system in which one only needs to use the creation operators for
+other states over a basis set $\{\ket{\alpha}\}$ finite or infinite.
+As such a coherent state is estrablished as:
+
+.. math::
+  \ket{\varphi} &= e^{b_1\hat{b}^\dagger_1}e^{b_2\hat{b}^\dagger_3}\cdots e^{b_p\hat{b}^\dagger_p} \cdots \ket{\emptyset} \\
+   &=\exp(\sum_\alpha b_\alpha \hat{b}_\alpha^\dagger)\ket{\emptyset} \\
+  \bra{\bar{\varphi}} &= \bra{\emptyset}\exp(\sum_\alpha \bar{b}_\alpha\hat{b}_\alpha)
+
+This coherent states continue to be eigenstates of the annihilation operators
+
+.. math::
+  \hat{b}_\alpha\ket{\varphi} &= b_\alpha\ket{\varphi} \\
+  \bra{\bar{\varphi}}\hat{b}^\dagger_\alpha &= \bra{\bar{\varphi}}\bar{b}_\alpha
+
+also
+
+.. math::
+  \hat{b}^\dagger_\alpha \ket{\varphi}
+   &= \hat{b}^\dagger_\alpha\exp(\sum_\alpha b_\alpha \hat{b}_\alpha^\dagger)\ket{\emptyset} \\
+   &= \frac{\partial}{\partial b_\alpha} \exp(\sum_\alpha b_\alpha \hat{b}_\alpha^\dagger)\ket{\emptyset} \\
+   &= \frac{\partial}{\partial b_\alpha} \ket{\varphi} \\
+   \rightarrow \bra{\bar{\varphi}}\hat{b}_\alpha &= \frac{\partial}{\partial \bar{b}_\alpha} \bra{\bar{\varphi}}
+
+And the many-particle closure relation is obeyed:
+
+.. math::
+  \hat{1} = \int \prod_\alpha \frac{d\bar{b}_\alpha db_\alpha}{2\pi i}e^{-\bar{b}_\alpha b_\alpha} \ket{\varphi}\bra{\bar{\varphi}}
 Fermion Coherent State
 ----------------------
