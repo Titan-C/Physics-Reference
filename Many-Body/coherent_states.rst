@@ -35,7 +35,7 @@ The overlap between 2 states is
   \braket{\bar{b}_1|b_2}=\sum_{n,m}\frac{\bar{b}_1^n}{\sqrt{n!}}\braket{n|m}
   \frac{b_2^m}{\sqrt{m!}} =\sum_n\frac{(\bar{b}_1 b_2)^2}{n!}=e^{\bar{b}_1 b_ 2}
 
-The probability amplitude for a coherent state to be in a state of $n$ particles
+The amplitude for a coherent state to be in a state of $n$ particles
 is
 
 .. math::
@@ -98,11 +98,32 @@ also
    &= \hat{b}^\dagger_\alpha\exp(\sum_\alpha b_\alpha \hat{b}_\alpha^\dagger)\ket{\emptyset} \\
    &= \frac{\partial}{\partial b_\alpha} \exp(\sum_\alpha b_\alpha \hat{b}_\alpha^\dagger)\ket{\emptyset} \\
    &= \frac{\partial}{\partial b_\alpha} \ket{\varphi} \\
-   \rightarrow \bra{\bar{\varphi}}\hat{b}_\alpha &= \frac{\partial}{\partial \bar{b}_\alpha} \bra{\bar{\varphi}}
+   \Rightarrow \bra{\bar{\varphi}}\hat{b}_\alpha &= \frac{\partial}{\partial \bar{b}_\alpha} \bra{\bar{\varphi}}
 
 And the many-particle closure relation is obeyed:
 
 .. math::
   \hat{1} = \int \prod_\alpha \frac{d\bar{b}_\alpha db_\alpha}{2\pi i}e^{-\bar{b}_\alpha b_\alpha} \ket{\varphi}\bra{\bar{\varphi}}
+
+Examples
+""""""""
+The distribution of particle numbers has the average value
+
+.. math::
+  \braket{\hat{N}} &= \frac{\braket{\bar{\varphi}|\hat{N}|\varphi}}{\braket{\bar{\varphi}|\varphi}} \\
+   &=\frac{\sum_\alpha \braket{\bar{\varphi}|\hat{b}_\alpha^\dagger\hat{b}_\alpha|\varphi}}{\braket{\bar{\varphi}|\varphi}} \\
+   &=\sum_\alpha \bar{b}_\alpha b_\alpha
+
+and the variance
+
+.. math::
+  \braket{\delta N} &= \braket{\hat{N}^2} - \braket{\hat{N}}^2 \\
+   &=\frac{\sum_{\alpha\beta} \braket{\bar{\varphi}|\hat{b}_\alpha^\dagger\hat{b}_\alpha \hat{b}_\beta^\dagger\hat{b}_\beta|\varphi}}{\braket{\bar{\varphi}|\varphi}} - \braket{\hat{N}}^2 \\
+   &=\frac{\sum_{\alpha\beta} \braket{\bar{\varphi}|\hat{b}_\alpha^\dagger(\delta_{\alpha\beta} +
+     \hat{b}_\beta^\dagger\hat{b}_\alpha)\hat{b}_\beta|\varphi}}{\braket{\bar{\varphi}|\varphi}} - \braket{\hat{N}}^2 \\
+   &= \sum_\alpha \frac{\braket{\bar{\varphi}|\bar{b}_\alpha b_\alpha|\varphi}}{\braket{\bar{\varphi}|\varphi}}
+    + \sum_{\alpha\beta} \frac{\bar{b}_\alpha\bar{b}_\beta b_\alpha b_\beta \braket{\bar{\varphi}|\varphi}}{\braket{\bar{\varphi}|\varphi}} - \braket{\hat{N}}^2\\
+   &=\braket{\hat{N}}
+
 Fermion Coherent State
 ----------------------
