@@ -25,9 +25,13 @@ is:
 
 .. math:: G^0_d(i\omega_n) = \frac{1}{i\omega_n - \epsilon_d}
 
-and its propagator will be drawn as:
+and its propagator will be drawn as: |fermion_gf|
 
-The Green's function of an isolated bath site is:
+.. |fermion_gf| image:: fermion_gf.svg
+
+The Green's function of an isolated bath site is: |fermion2_gf|
+
+.. |fermion2_gf| image:: fermion2_gf.svg
 
 .. math:: G^0_{c_l}(i\omega_n) = \frac{1}{i\omega_n - \varepsilon_l}
 
@@ -37,6 +41,9 @@ and back and can repeat this process any number of times.
 
 The sum of this events gives the full Green's function(not writing the function
 argument $G_d(i\omega_n) \rightarrow G_d$
+
+.. image:: impurity_gf.svg
+    :align: center
 
 .. math::
   G_d =&  G^0_d +
