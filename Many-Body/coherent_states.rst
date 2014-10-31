@@ -81,7 +81,7 @@ other states over a basis set $\{\ket{\alpha}\}$ finite or infinite.
 As such a coherent state is established as:
 
 .. math::
-  \ket{\varphi} &= e^{b_1\hat{b}^\dagger_1}e^{b_2\hat{b}^\dagger_3}\cdots e^{b_p\hat{b}^\dagger_p} \cdots \ket{\emptyset} \\
+  \ket{\varphi} &= e^{b_1\hat{b}^\dagger_1}e^{b_2\hat{b}^\dagger_2}\cdots e^{b_p\hat{b}^\dagger_p} \cdots \ket{\emptyset} \\
    &=\exp(\sum_\alpha b_\alpha \hat{b}_\alpha^\dagger)\ket{\emptyset} \\
   \bra{\bar{\varphi}} &= \bra{\emptyset}\exp(\sum_\alpha \bar{b}_\alpha\hat{b}_\alpha)
 

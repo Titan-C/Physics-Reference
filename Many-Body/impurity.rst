@@ -40,7 +40,7 @@ the behavior of the impurity. It can propagate freely, propagate into the bath
 and back and can repeat this process any number of times.
 
 The sum of this events gives the full Green's function(not writing the function
-argument $G_d(i\omega_n) \rightarrow G_d$
+argument $G_d(i\omega_n) \rightarrow G_d$)
 
 .. image:: impurity_gf.svg
     :align: center
@@ -79,3 +79,9 @@ for the bath with bandwith $D$ represented as:
 .. math::
   D(\varepsilon) = \sum_l \delta(\varepsilon-\varepsilon_l)
    = \frac{\theta(D^2-\varepsilon^2)}{2D}
+
+In that case the hybridization function can be calculated as:
+
+.. math::
+  \Delta(i\omega_n) = \frac{|V|^2}{2D}
+  \int \frac{d\varepsilon\theta(D^2-\varepsilon^2)}{i\omega_n - \varepsilon}
